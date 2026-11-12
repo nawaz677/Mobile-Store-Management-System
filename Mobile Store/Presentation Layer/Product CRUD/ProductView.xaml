@@ -1,0 +1,19 @@
+﻿<Window x:Class="Presentation_Layer.ProductView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation_Layer"
+        mc:Ignorable="d"
+        Title="ProductView" Height="553" Width="1113">
+    <Grid>
+        <DataGrid x:Name="ProductsDataGrid"
+      Margin="106,159,101,59"
+      RenderTransformOrigin="0.497,0.452"
+      AutoGenerateColumns="True"
+      IsReadOnly="True"
+      CanUserAddRows="False"/>
+        <Label x:Name="Available_Products_Label" Content="Available Products" HorizontalAlignment="Left" Margin="391,70,0,0" VerticalAlignment="Top" Width="395" FontSize="35"/>
+
+    </Grid>
+</Window>

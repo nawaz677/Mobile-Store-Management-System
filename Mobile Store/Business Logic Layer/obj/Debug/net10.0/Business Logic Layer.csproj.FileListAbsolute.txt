@@ -1,0 +1,17 @@
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Business Logic Layer.deps.json
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Business Logic Layer.dll
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Business Logic Layer.pdb
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Data Access Layer.dll
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Data Access Layer.pdb
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.csproj.AssemblyReference.cache
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.AssemblyInfoInputs.cache
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.AssemblyInfo.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.csproj.CoreCompileInputs.cache
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business.6AB683E1.Up2Date
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.dll
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\refint\Business Logic Layer.dll
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\Business Logic Layer.pdb
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\obj\Debug\net10.0\ref\Business Logic Layer.dll
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Models.dll
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Business Logic Layer\bin\Debug\net10.0\Models.pdb
