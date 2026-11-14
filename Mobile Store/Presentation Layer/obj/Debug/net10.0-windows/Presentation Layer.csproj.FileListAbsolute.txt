@@ -80,13 +80,29 @@ C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentatio
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\bin\Debug\net10.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\bin\Debug\net10.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\bin\Debug\net10.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductAdd.g.cs
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductDelete.g.cs
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductUpdate.g.cs
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductView.g.cs
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductAdd.baml
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductDelete.baml
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductUpdate.baml
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductView.baml
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductUpdate2.g.cs
-C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\CRUD\ProductUpdate2.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductAdd.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductDelete.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductUpdate.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductUpdate2.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductView.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\bin\Debug\net10.0-windows\Presentation Layer.runtimeconfig.dev.json
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductAdd.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductDelete.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductUpdate.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductUpdate2.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductView.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Presentation Layer.sourcelink.json
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductsMainPage.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Product CRUD\ProductsMainPage.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomersMainWindow.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerView.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomersMainWindow.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerView.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerAdd.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerAdd.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerDelete.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerDelete.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdate.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdateDetails.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdate.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdateDetails.baml

@@ -2,6 +2,24 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Customer CRUD\CustomerAdd.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer CRUD\CustomerDelete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer CRUD\CustomersMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer CRUD\CustomerUpdate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer CRUD\CustomerUpdateDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customer CRUD\CustomerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Product CRUD\ProductAdd.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +33,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Product CRUD\ProductUpdate2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Product CRUD\ProductsMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

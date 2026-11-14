@@ -34,8 +34,9 @@ PRIMARY KEY(product_id) )
 
 DROP TABLE IF EXISTS production.customers ;
 CREATE TABLE production.customers(
-customer_id int NOT NULL, 
-name VARCHAR(50), 
+customer_id INT IDENTITY(1, 1) NOT NULL, 
+first_name VARCHAR(50), 
+last_name VARCHAR(50),
 age INT, 
 phone_number VARCHAR(50), 
 address VARCHAR(50) 

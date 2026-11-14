@@ -13,3 +13,4 @@ C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Data Access
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Data Access Layer\obj\Debug\net10.0\Data Acc.F8789B99.Up2Date
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Data Access Layer\bin\Debug\net10.0\Models.dll
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Data Access Layer\bin\Debug\net10.0\Models.pdb
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Data Access Layer\obj\Debug\net10.0\Data Access Layer.sourcelink.json

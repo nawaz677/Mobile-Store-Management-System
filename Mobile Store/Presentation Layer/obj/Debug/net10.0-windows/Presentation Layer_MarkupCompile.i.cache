@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\App.xaml
-6-987986750
+13-1333138129
 
-111603001913
-229-572107333
-MainWindow.xaml;Product CRUD\ProductAdd.xaml;Product CRUD\ProductDelete.xaml;Product CRUD\ProductUpdate.xaml;Product CRUD\ProductUpdate2.xaml;Product CRUD\ProductView.xaml;
+18-420229118
+229-1725724786
+Customer CRUD\CustomerAdd.xaml;Customer CRUD\CustomerDelete.xaml;Customer CRUD\CustomersMainWindow.xaml;Customer CRUD\CustomerUpdate.xaml;Customer CRUD\CustomerUpdateDetails.xaml;Customer CRUD\CustomerView.xaml;MainWindow.xaml;Product CRUD\ProductAdd.xaml;Product CRUD\ProductDelete.xaml;Product CRUD\ProductsMainPage.xaml;Product CRUD\ProductUpdate.xaml;Product CRUD\ProductUpdate2.xaml;Product CRUD\ProductView.xaml;
 
-False
+True
 

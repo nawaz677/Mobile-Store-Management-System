@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using Microsoft.Data.SqlClient;
 using Business_Logic_Layer;
 using Models;
+using Presentation_Layer.Customer_CRUD;
 
 namespace Presentation_Layer
 {
@@ -25,35 +26,18 @@ namespace Presentation_Layer
 
         }
 
-        private void AddProduct_Click(object sender, RoutedEventArgs e)
+        private void Products_Main_Button_Click(object sender, RoutedEventArgs e)
         {
-            ProductAdd add_product = new ProductAdd();
-            add_product.Owner = this;
-            add_product.ShowDialog();
+            ProductsMainPage products_main_page = new ProductsMainPage();
+            products_main_page.Owner = this;
+            products_main_page.Show();
         }
 
-        private void ViewProducts_Button_Click(object sender, RoutedEventArgs e)
+        private void Customers_Button_Click(object sender, RoutedEventArgs e)
         {
-            ProductView view_product = new ProductView();
-            view_product.Owner = this;
-            view_product.ShowDialog();
+            CustomersMainWindow cust_main = new CustomersMainWindow();
+            cust_main.Owner = this;
+            cust_main.Show();
         }
-
-
-        private void Update_Product_Button_Click(object sender, RoutedEventArgs e)
-        {
-            ProductUpdate update_product = new ProductUpdate();
-            update_product.Owner = this;
-            update_product.ShowDialog();
-        }
-
-        private void Delete_Product_Button_Click(object sender, RoutedEventArgs e)
-        {
-            ProductDelete delete_product = new ProductDelete();
-            delete_product.Owner = this;
-            delete_product.ShowDialog();
-        }
-
-        
     }
 }

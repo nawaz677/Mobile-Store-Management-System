@@ -45,7 +45,6 @@ namespace Data_Access_Layer
             }
         }
 
-
         public int AddProductInDatabase(Product prd)
         {
             using (connection)
@@ -66,7 +65,6 @@ namespace Data_Access_Layer
             }
 
         }
-
 
         public int RemoveProductFromDatabase(Product prd)
         {
@@ -101,7 +99,6 @@ namespace Data_Access_Layer
                 return rows;
             }
         }
-
 
 
     }
