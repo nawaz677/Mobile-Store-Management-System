@@ -8,10 +8,10 @@ namespace Business_Logic_Layer
 {
     public class CustomerBLL
     {
-        public List<Customer> ViewCustomers()
+        public List<Customer> GetCustomersList()
         {
             CustomerDAL cust = new CustomerDAL();
-            return cust.ViewCustomers();
+            return cust.GetCustomersList();
         }
 
         public int AddCustomer(Customer cust)
@@ -22,11 +22,11 @@ namespace Business_Logic_Layer
 
         public Customer ValidateCustomer(Customer cust, string msg)
         {
-            List<Customer> customers = ViewCustomers();
+            List<Customer> customers = GetCustomersList();
             
             foreach (Customer customer in customers)
             {
-                if (customer.first_name == cust.first_name && customer.last_name == cust.last_name && customer.phone_number == cust.phone_number)
+                if (customer.First_Name == cust.First_Name && customer.Last_Name == cust.Last_Name && customer.Phone_Number == cust.Phone_Number)
                 {
                     if (msg.ToLower() == "delete")
                     {

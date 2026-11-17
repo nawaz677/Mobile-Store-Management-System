@@ -15,7 +15,7 @@ namespace Data_Access_Layer
             return conn.GetConnection();
         }
 
-        public List<Customer> ViewCustomers()
+        public List<Customer> GetCustomersList()
         {
             string query = "SELECT * FROM production.customers";
             using (connection)
@@ -28,12 +28,12 @@ namespace Data_Access_Layer
                 while (reader.Read())
                 {
                     Customer cust = new Customer();
-                    cust.customer_id = (int)reader["customer_id"];
-                    cust.first_name = (string)reader["first_name"];
-                    cust.last_name = (string)reader["last_name"];
-                    cust.age = (int)reader["age"];
-                    cust.phone_number = (string)reader["phone_number"];
-                    cust.address = (string)reader["address"];
+                    cust.Customer_Id = (int)reader["customer_id"];
+                    cust.First_Name = (string)reader["first_name"];
+                    cust.Last_Name = (string)reader["last_name"];
+                    cust.Age = (int)reader["age"];
+                    cust.Phone_Number = (string)reader["phone_number"];
+                    cust.Address = (string)reader["address"];
 
                     customers.Add(cust);
                 }
@@ -52,11 +52,11 @@ namespace Data_Access_Layer
 
                 SqlCommand cmd = new SqlCommand(query, connection);      
 
-                cmd.Parameters.AddWithValue("@first_name", cust.first_name);
-                cmd.Parameters.AddWithValue("@last_name", cust.last_name);
-                cmd.Parameters.AddWithValue("@age", cust.age);
-                cmd.Parameters.AddWithValue("@phone_number", cust.phone_number);
-                cmd.Parameters.AddWithValue("@address", cust.address);
+                cmd.Parameters.AddWithValue("@first_name", cust.First_Name);
+                cmd.Parameters.AddWithValue("@last_name", cust.Last_Name);
+                cmd.Parameters.AddWithValue("@age", cust.Age);
+                cmd.Parameters.AddWithValue("@phone_number", cust.Phone_Number);
+                cmd.Parameters.AddWithValue("@address", cust.Address);
 
                 int rows = cmd.ExecuteNonQuery();
                 return rows;
@@ -72,7 +72,7 @@ namespace Data_Access_Layer
                 string query = "DELETE FROM production.customers WHERE customer_id = @customer_id";
 
                 SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@customer_id", cust.customer_id);
+                cmd.Parameters.AddWithValue("@customer_id", cust.Customer_Id);
 
                 int rows = cmd.ExecuteNonQuery();
                 return rows;
@@ -88,12 +88,12 @@ namespace Data_Access_Layer
 
                 SqlCommand cmd = new SqlCommand(query, connection);
 
-                cmd.Parameters.AddWithValue("@first_name", cust.first_name);
-                cmd.Parameters.AddWithValue("@last_name", cust.last_name);
-                cmd.Parameters.AddWithValue("@age", cust.age);
-                cmd.Parameters.AddWithValue("@phone_number", cust.phone_number);
-                cmd.Parameters.AddWithValue("@address", cust.address);
-                cmd.Parameters.AddWithValue("@customer_id", cust.customer_id);
+                cmd.Parameters.AddWithValue("@first_name", cust.First_Name);
+                cmd.Parameters.AddWithValue("@last_name", cust.Last_Name);
+                cmd.Parameters.AddWithValue("@age", cust.Age);
+                cmd.Parameters.AddWithValue("@phone_number", cust.Phone_Number);
+                cmd.Parameters.AddWithValue("@address", cust.Address);
+                cmd.Parameters.AddWithValue("@customer_id", cust.Customer_Id);
 
                 int rows = cmd.ExecuteNonQuery();
                 return rows;

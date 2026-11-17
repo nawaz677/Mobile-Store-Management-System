@@ -17,7 +17,7 @@
         <TextBox x:Name="last_name_Textbox" HorizontalAlignment="Left" Margin="58,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="25"/>
         <TextBox x:Name="age_Textbox" HorizontalAlignment="Left" Margin="59,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="25"/>
         <TextBox x:Name="phone_number_Textbox" HorizontalAlignment="Left" Margin="430,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" FontSize="25"/>
-        <TextBox x:Name="address_Textbox" HorizontalAlignment="Left" Margin="435,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" FontSize="25" Height="52"/>
+        <TextBox x:Name="address_Textbox" HorizontalAlignment="Left" Margin="435,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" FontSize="25" Height="47"/>
         <Button x:Name="click_here_to_add_Button" Content="Click here to Add" HorizontalAlignment="Left" Margin="439,344,0,0" VerticalAlignment="Top" Width="230" Height="59" FontSize="25" Click="click_here_to_add_Button_Click"/>
 
     </Grid>

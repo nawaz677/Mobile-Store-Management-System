@@ -34,8 +34,8 @@ namespace Presentation_Layer
 
         private void Click_to_Update_2_Button_Click(object sender, RoutedEventArgs e)
         {
-            _product.stock_quantity = Convert.ToInt32(Stock_Quantity_Textbox.Text);
-            _product.current_price = Convert.ToDecimal(Current_Price_Textbox.Text);
+            _product.Stock_Quantity = Convert.ToInt32(Stock_Quantity_Textbox.Text);
+            _product.Current_Price = Convert.ToDecimal(Current_Price_Textbox.Text);
 
             ProductBLL bll = new ProductBLL();
             bool result = bll.ValidateUserEnteredProduct(_product);

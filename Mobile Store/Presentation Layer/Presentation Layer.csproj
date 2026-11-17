@@ -10,7 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Picture.jpg" />
+    <None Remove="tiger.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Business Logic Layer\Business Logic Layer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Picture.jpg" />
+    <Resource Include="tiger.jpg" />
   </ItemGroup>
 
 </Project>

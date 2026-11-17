@@ -12,6 +12,7 @@ using Microsoft.Data.SqlClient;
 using Business_Logic_Layer;
 using Models;
 using Presentation_Layer.Customer_CRUD;
+using Presentation_Layer.Order_CRUD;
 
 namespace Presentation_Layer
 {
@@ -23,7 +24,6 @@ namespace Presentation_Layer
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void Products_Main_Button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +38,13 @@ namespace Presentation_Layer
             CustomersMainWindow cust_main = new CustomersMainWindow();
             cust_main.Owner = this;
             cust_main.Show();
+        }
+
+        private void Orders_Button_Click(object sender, RoutedEventArgs e)
+        {
+            OrdersMainWindow orders_main = new OrdersMainWindow();
+            orders_main.Owner = this;
+            orders_main.Show();
         }
     }
 }

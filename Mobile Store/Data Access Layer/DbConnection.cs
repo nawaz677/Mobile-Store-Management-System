@@ -8,7 +8,7 @@ namespace Data_Access_Layer
 {
     public class DbConnection
     {
-        private string connection_string = "Server=HPElitebook;Database=mobile_store;Integrated Security =True;TrustServerCertificate=True";
+        private string connection_string = "Server=HPElitebook;Database=mobile_store;Integrated Security=True;TrustServerCertificate=True";
         
         public SqlConnection GetConnection()
         {

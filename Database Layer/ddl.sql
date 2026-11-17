@@ -45,8 +45,9 @@ PRIMARY KEY(customer_id) )
 
 DROP TABLE IF EXISTS sales.orders ;
 CREATE TABLE sales.orders( 
-order_id INT NOT NULL, 
+order_id INT IDENTITY(1, 1) NOT NULL, 
 customer_id INT, 
+total_amount DECIMAL,
 order_date DATETIME 
 
 PRIMARY KEY(order_id) 
@@ -56,7 +57,7 @@ REFERENCES production.customers(customer_id) )
 
 DROP TABLE IF EXISTS sales.order_details ;
 CREATE TABLE sales.order_details( 
-order_details_id INT NOT NULL, 
+order_details_id INT IDENTITY(1, 1) NOT NULL, 
 order_id INT, 
 product_id INT, 
 quantity INT, 
@@ -67,4 +68,3 @@ CONSTRAINT fk_orders_order_details FOREIGN KEY(order_id)
 REFERENCES sales.orders (order_id), 
 CONSTRAINT fk_products_order_details FOREIGN KEY(product_id)
 REFERENCES production.products (product_id) )
-

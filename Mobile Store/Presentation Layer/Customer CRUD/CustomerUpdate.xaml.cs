@@ -27,9 +27,9 @@ namespace Presentation_Layer.Customer_CRUD
         private void click_to_proceed_Button_Click(object sender, RoutedEventArgs e)
         {
             Customer cust = new Customer();
-            cust.first_name = first_name_Textbox.Text;
-            cust.last_name = last_name_Textbox.Text;
-            cust.phone_number = phone_number_Textbox.Text;
+            cust.First_Name = first_name_Textbox.Text;
+            cust.Last_Name = last_name_Textbox.Text;
+            cust.Phone_Number = phone_number_Textbox.Text;
 
             CustomerBLL bll = new CustomerBLL();
             Customer customer = bll.ValidateCustomer(cust, "update");
@@ -45,8 +45,8 @@ namespace Presentation_Layer.Customer_CRUD
             else
             {
                 MessageBox.Show("Error! customer does not exist");
-                this.Close();
             }
+
         }
     }
 }

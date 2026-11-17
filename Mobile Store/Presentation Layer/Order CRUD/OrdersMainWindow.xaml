@@ -1,0 +1,15 @@
+﻿<Window x:Class="Presentation_Layer.Order_CRUD.OrdersMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation_Layer.Order_CRUD"
+        mc:Ignorable="d"
+        Title="OrdersMainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="Order_Management_Label" Content="Order Management" HorizontalAlignment="Left" Margin="248,37,0,0" VerticalAlignment="Top" Width="325" Height="63" FontSize="35" Background="#FFAFDA56"/>
+        <Button x:Name="View_Orders_Button" Content="View Orders" HorizontalAlignment="Left" Margin="471,142,0,0" VerticalAlignment="Top" Height="111" Width="241" FontSize="30" Click="View_Orders_Button_Click"/>
+        <Button x:Name="Create_Order_Button" Content="Create Order" HorizontalAlignment="Left" Margin="65,142,0,0" VerticalAlignment="Top" Height="111" Width="241" FontSize="30" Click="Create_Order_Button_Click"/>
+
+    </Grid>
+</Window>

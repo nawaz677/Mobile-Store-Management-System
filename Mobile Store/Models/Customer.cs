@@ -6,12 +6,15 @@ namespace Models
 {
     public class Customer
     {
-        public int customer_id { get; set; }
-        public string first_name { get; set; }
-        public string last_name { get; set; }   
-        public int age { get; set; }
-        public string phone_number { get; set; }
-        public string address { get; set; }
-           
+        public int Customer_Id { get; set; }
+        public string First_Name { get; set; }
+        public string Last_Name { get; set; }   
+        public int Age { get; set; }
+        public string Phone_Number { get; set; }
+        public string Address { get; set; }
+
+        // Using a compound property for ComboBox.DispalyMemeberPath
+        public string Customers => $"{First_Name} {Last_Name} {Phone_Number}";
+
     }
 }

@@ -11,6 +11,6 @@
         <Button x:Name="ViewProducts_Button" Content="View Products" HorizontalAlignment="Left" Margin="631,125,0,0" VerticalAlignment="Top" Height="168" Width="252" FontSize="30" Click="ViewProducts_Button_Click" Background="#FF80EA59"/>
         <Button x:Name="Delete_Product_Button" Content="Delete Product" HorizontalAlignment="Left" Margin="631,378,0,0" VerticalAlignment="Top" Height="167" Width="252" FontSize="30" Click="Delete_Product_Button_Click" Background="#FF43E9D4"/>
         <Button x:Name="Update_Product_Button" Content="Update Product" HorizontalAlignment="Left" Margin="121,378,0,0" VerticalAlignment="Top" Height="167" Width="252" FontSize="30" Background="#FFEEDC6C" Click="Update_Product_Button_Click"/>
-        <Label x:Name="Product_Management_Label" Content="Product Management" HorizontalAlignment="Left" Margin="305,24,0,0" VerticalAlignment="Top" Width="402" Height="74" FontSize="40" Background="#FFEF7474"/>
+        <Label x:Name="Product_Management_Label" Content="Product Management" HorizontalAlignment="Left" Margin="305,24,0,0" VerticalAlignment="Top" Width="402" Height="74" FontSize="40" Background="#FFD274EF"/>
     </Grid>
 </Window>

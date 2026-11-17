@@ -20,6 +20,15 @@
     <Compile Update="Customer CRUD\CustomerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Order CRUD\OrderCreate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Order CRUD\OrdersMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Order CRUD\OrderView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Product CRUD\ProductAdd.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

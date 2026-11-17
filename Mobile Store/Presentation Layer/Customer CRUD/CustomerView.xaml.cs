@@ -23,7 +23,7 @@ namespace Presentation_Layer.Customer_CRUD
         {
             InitializeComponent();
             CustomerBLL bll = new CustomerBLL();
-            List<Customer> customers = bll.ViewCustomers();
+            List<Customer> customers = bll.GetCustomersList();
             Data_Grid.ItemsSource = customers;
         }
 

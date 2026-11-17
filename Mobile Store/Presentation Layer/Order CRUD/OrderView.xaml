@@ -1,0 +1,14 @@
+﻿<Window x:Class="Presentation_Layer.Order_CRUD.OrderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation_Layer.Order_CRUD"
+        mc:Ignorable="d"
+        Title="OrderView" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="View_Orders_Label" Content="View Orders" HorizontalAlignment="Left" Margin="288,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.349,3.961" Height="56" Width="196" FontSize="35"/>
+        <DataGrid x:Name="View_Orders_DataGrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="0,115,0,0" FontSize="25"/>
+
+    </Grid>
+</Window>

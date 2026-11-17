@@ -17,12 +17,12 @@ namespace Business_Logic_Layer
 
         public bool ValidateUserEnteredProduct(Product prd)
         {
-            if(prd.stock_quantity < 0)
+            if(prd.Stock_Quantity < 0)
             {
                 return false;
             }
 
-            if (prd.current_price < 15000)
+            if (prd.Current_Price < 15000)
             {
                 return false;
             }
@@ -61,7 +61,7 @@ namespace Business_Logic_Layer
         {
             foreach (Product product in products)
             {
-                if (prd.company == product.company && prd.series == product.series && prd.model == product.model)
+                if (prd.Company == product.Company && prd.Series == product.Series && prd.Model == product.Model)
                 {
                     return product;
                 }

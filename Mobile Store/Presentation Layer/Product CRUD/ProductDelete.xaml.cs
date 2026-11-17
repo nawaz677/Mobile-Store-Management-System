@@ -27,20 +27,28 @@ namespace Presentation_Layer
         private void Click_to_Remove_Button_Click(object sender, RoutedEventArgs e)
         {
             Product prd = new Product();
-            prd.company = Company_Textbox.Text;
-            prd.series = Series_Textbox.Text;
-            prd.model = Model_Textbox.Text;
+            prd.Company = Company_Textbox.Text;
+            prd.Series = Series_Textbox.Text;
+            prd.Model = Model_Textbox.Text;
 
             ProductBLL bll = new ProductBLL();
             List<Product> products = bll.GetProductsList();
 
             Product product = bll.ValidateStringCredentials(products, prd);
 
-            int rows = bll.FurtherPassValidatedProduct(product, "delete");
-
-            if (rows > 0)
+            if (product == null)
             {
-                MessageBox.Show("Product Successfully Deleted!");
+                MessageBox.Show("Error! product does not exist");
+            }
+
+            else
+            {
+                int rows = bll.FurtherPassValidatedProduct(product, "delete");
+
+                if (rows == 1)
+                {
+                    MessageBox.Show("Product Successfully Deleted!");
+                }
             }
 
             this.Close();

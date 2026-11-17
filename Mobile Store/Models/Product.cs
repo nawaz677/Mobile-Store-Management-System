@@ -6,12 +6,15 @@ namespace Models
 {
     public class Product
     {
-        public int product_id {  get; set; }
-        public string company {  get; set; }
-        public string series { get; set; }
-        public string model { get; set; }
-        public int stock_quantity { get; set; }
-        public decimal current_price { get; set; }
+        public int Product_Id {  get; set; }
+        public string Company {  get; set; }
+        public string Series { get; set; }
+        public string Model { get; set; }
+        public int Stock_Quantity { get; set; }
+        public decimal Current_Price { get; set; }
+
+        // Using a compound property for ComboBox.DispalyMemeberPath
+        public string Products => $"{Company} {Series} {Model}";
 
     }
 }

@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="CustomersMainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="Customer_Management_Label" Content="Customer Management" HorizontalAlignment="Left" Margin="235,43,0,0" VerticalAlignment="Top" Width="323" Height="56" FontSize="30" Background="#FFDFF20C"/>
-        <Button x:Name="View_Customers_Button" Content="View Customers" HorizontalAlignment="Left" Margin="52,135,0,0" VerticalAlignment="Top" Height="95" Width="263" FontSize="30" Click="View_Customers_Button_Click"/>
-        <Button x:Name="Add_Customer_Button" Content="Add Customer" HorizontalAlignment="Left" Margin="470,135,0,0" VerticalAlignment="Top" Width="260" Height="95" FontSize="30" Click="Add_Customer_Button_Click"/>
-        <Button x:Name="delete_customer_button" Content="Delete Customer" HorizontalAlignment="Left" Margin="470,277,0,0" VerticalAlignment="Top" Height="98" Width="262" FontSize="30" Click="delete_customer_button_Click"/>
-        <Button x:Name="Update_Customer_Button" Content="Update Customer" HorizontalAlignment="Left" Margin="55,277,0,0" VerticalAlignment="Top" Height="98" Width="260" FontSize="30" Click="Update_Customer_Button_Click"/>
+        <Label x:Name="Customer_Management_Label" Content="Customer Management" HorizontalAlignment="Left" Margin="235,41,0,0" VerticalAlignment="Top" Width="323" Height="65" FontSize="30" Background="#FF5AFE5C"/>
+        <Button x:Name="View_Customers_Button" Content="View Customers" HorizontalAlignment="Left" Margin="470,135,0,0" VerticalAlignment="Top" Height="95" Width="263" FontSize="30" Click="View_Customers_Button_Click" Background="#FFF48A8A"/>
+        <Button x:Name="Add_Customer_Button" Content="Add Customer" HorizontalAlignment="Left" Margin="52,135,0,0" VerticalAlignment="Top" Width="260" Height="95" FontSize="30" Click="Add_Customer_Button_Click" Background="#FFF3AF6C"/>
+        <Button x:Name="delete_customer_button" Content="Delete Customer" HorizontalAlignment="Left" Margin="470,277,0,0" VerticalAlignment="Top" Height="98" Width="262" FontSize="30" Click="delete_customer_button_Click" Background="#FFBC9BFF"/>
+        <Button x:Name="Update_Customer_Button" Content="Update Customer" HorizontalAlignment="Left" Margin="55,277,0,0" VerticalAlignment="Top" Height="98" Width="260" FontSize="30" Click="Update_Customer_Button_Click" Background="#FF55D6CE"/>
 
     </Grid>
 </Window>

@@ -27,11 +27,11 @@ namespace Presentation_Layer
         private void Click_to_Add_Button_Click(object sender, RoutedEventArgs e)
         {
             Product prd = new Product();
-            prd.company = Company_TextBox.Text;
-            prd.series = Series_Textbox.Text;
-            prd.model = Model_Textbox.Text;
-            prd.stock_quantity = Convert.ToInt32(Stock_Quantity_Textbox.Text);
-            prd.current_price = Convert.ToDecimal(Current_Price_Textbox.Text);
+            prd.Company = Company_TextBox.Text;
+            prd.Series = Series_Textbox.Text;
+            prd.Model = Model_Textbox.Text;
+            prd.Stock_Quantity = Convert.ToInt32(Stock_Quantity_Textbox.Text);
+            prd.Current_Price = Convert.ToDecimal(Current_Price_Textbox.Text);
             ProductBLL bll = new ProductBLL();
             bool result = bll.ValidateUserEnteredProduct(prd);
 

@@ -30,12 +30,12 @@ namespace Data_Access_Layer
                         while (reader.Read())
                         {
                             Product prd = new Product();
-                            prd.product_id = (int)reader["product_id"];
-                            prd.company = (string)reader["company"];
-                            prd.series = (string)reader["series"];
-                            prd.model = (string)reader["model"];
-                            prd.stock_quantity = (int)reader["stock_quantity"];
-                            prd.current_price = (decimal)reader["current_price"];
+                            prd.Product_Id = (int)reader["product_id"];
+                            prd.Company = (string)reader["company"];
+                            prd.Series = (string)reader["series"];
+                            prd.Model = (string)reader["model"];
+                            prd.Stock_Quantity = (int)reader["stock_quantity"];
+                            prd.Current_Price = (decimal)reader["current_price"];
 
                             products.Add(prd);
                         }
@@ -54,11 +54,11 @@ namespace Data_Access_Layer
 
                 SqlCommand cmd = new SqlCommand(query, connection);
 
-                cmd.Parameters.AddWithValue("@company", prd.company);
-                cmd.Parameters.AddWithValue("@series", prd.series);
-                cmd.Parameters.AddWithValue("@model", prd.model);
-                cmd.Parameters.AddWithValue("@stock_quantity", prd.stock_quantity);
-                cmd.Parameters.AddWithValue("@current_price", prd.current_price);
+                cmd.Parameters.AddWithValue("@company", prd.Company);
+                cmd.Parameters.AddWithValue("@series", prd.Series);
+                cmd.Parameters.AddWithValue("@model", prd.Model);
+                cmd.Parameters.AddWithValue("@stock_quantity", prd.Stock_Quantity);
+                cmd.Parameters.AddWithValue("@current_price", prd.Current_Price);
 
                 int rows = cmd.ExecuteNonQuery();
                 return rows;
@@ -74,7 +74,7 @@ namespace Data_Access_Layer
                 string query = "DELETE FROM production.products WHERE product_id = @product_id";
                 SqlCommand cmd = new SqlCommand(query, connection);
 
-                cmd.Parameters.AddWithValue("@product_id", prd.product_id);
+                cmd.Parameters.AddWithValue("@product_id", prd.Product_Id);
 
                 int rows = cmd.ExecuteNonQuery();
                 return rows;
@@ -91,9 +91,9 @@ namespace Data_Access_Layer
 
                 SqlCommand cmd = new SqlCommand(query, connection);
 
-                cmd.Parameters.AddWithValue("@stock_quantity", prd.stock_quantity);
-                cmd.Parameters.AddWithValue("@current_price", prd.current_price);
-                cmd.Parameters.AddWithValue("@product_id", prd.product_id);
+                cmd.Parameters.AddWithValue("@stock_quantity", prd.Stock_Quantity);
+                cmd.Parameters.AddWithValue("@current_price", prd.Current_Price);
+                cmd.Parameters.AddWithValue("@product_id", prd.Product_Id);
 
                 int rows = cmd.ExecuteNonQuery();
                 return rows;

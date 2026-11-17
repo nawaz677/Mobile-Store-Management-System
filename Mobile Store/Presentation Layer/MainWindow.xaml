@@ -8,7 +8,12 @@
         Title="MainWindow" Height="636" Width="1100">
     <Grid Margin="0,-14,10,11">
         <Label x:Name="Jauharabad_Mobiles_Label" Content="Jauharabad Mobiles" HorizontalAlignment="Left" Margin="340,64,0,0" VerticalAlignment="Top" Width="366" Height="74" FontSize="40" Background="#FFEF7474"/>
-        <Button x:Name="Products_Main_Button" Content="Products" HorizontalAlignment="Left" Margin="116,210,0,0" VerticalAlignment="Top" Height="112" Width="234" FontSize="30" Click="Products_Main_Button_Click"/>
-        <Button x:Name="Customers_Button" Content="Customers" HorizontalAlignment="Left" Margin="630,210,0,0" VerticalAlignment="Top" Height="112" Width="232" FontSize="30" Click="Customers_Button_Click"/>
+        <Button x:Name="Products_Main_Button" Content="Products" HorizontalAlignment="Left" Margin="116,210,0,0" VerticalAlignment="Top" Height="133" Width="234" FontSize="30" Click="Products_Main_Button_Click"/>
+        <Button x:Name="Customers_Button" Content="Customers" HorizontalAlignment="Left" Margin="630,210,0,0" VerticalAlignment="Top" Height="133" Width="232" FontSize="30" Click="Customers_Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="145" Margin="174,37,0,0" VerticalAlignment="Top" Width="115" Source="/tiger.jpg"/>
+        <Image HorizontalAlignment="Left" Height="200" Margin="523,368,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image HorizontalAlignment="Left" Height="152" Margin="752,35,0,0" VerticalAlignment="Top" Width="110" Source="/Picture.jpg"/>
+        <Button x:Name="Orders_Button" Content="Orders" HorizontalAlignment="Left" Margin="116,394,0,0" VerticalAlignment="Top" Height="126" Width="234" FontSize="30" Click="Orders_Button_Click"/>
+
     </Grid>
 </Window>

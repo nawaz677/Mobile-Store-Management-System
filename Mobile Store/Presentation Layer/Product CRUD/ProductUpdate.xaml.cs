@@ -27,9 +27,9 @@ namespace Presentation_Layer
         private void Click_to_Update_Button_Click(object sender, RoutedEventArgs e)
         {
             Product prd = new Product();
-            prd.company = Company_Textbox.Text;
-            prd.series = Series_Textbox.Text;
-            prd.model = Model_Textbox.Text;
+            prd.Company = Company_Textbox.Text;
+            prd.Series = Series_Textbox.Text;
+            prd.Model = Model_Textbox.Text;
             // prd.stock_quantity = Convert.ToInt32(Stock_Quantity_Textbox.Text);
             // prd.current_price = Convert.ToDecimal(Current_Price_Textbox.Text);
             

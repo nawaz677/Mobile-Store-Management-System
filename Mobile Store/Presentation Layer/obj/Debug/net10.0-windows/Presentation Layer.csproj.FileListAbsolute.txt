@@ -106,3 +106,9 @@ C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentatio
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdateDetails.g.cs
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdate.baml
 C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Customer CRUD\CustomerUpdateDetails.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Order CRUD\OrdersMainWindow.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Order CRUD\OrderView.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Order CRUD\OrdersMainWindow.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Order CRUD\OrderView.baml
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Order CRUD\OrderCreate.g.cs
+C:\Users\nawaz\Downloads\Mobile Store Management System\Mobile Store\Presentation Layer\obj\Debug\net10.0-windows\Order CRUD\OrderCreate.baml
