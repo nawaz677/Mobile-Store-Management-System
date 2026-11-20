@@ -16,24 +16,61 @@ namespace Data_Access_Layer
             return conn.GetConnection();
         }
 
-        public int AddOrderInDatabase(Product prd, Customer cust, Order o, OrderDetails od)
+        public bool AddOrderInDatabase(Order order, Decimal grand_total)
         {
             using (connection)
             {
                 connection.Open();
-                string query = "DECLARE @latest_order_id INT INSERT INTO sales.orders (customer_id, total_amount, order_date) VALUES (@customer_id, @total_amount, GETDATE()) SET @latest_order_id = SCOPE_IDENTITY(); INSERT INTO sales.order_details (order_id, product_id, quantity, unit_price) VALUES (@latest_order_id, @product_id, @quantity, @unit_price);";
+                SqlTransaction transaction = connection.BeginTransaction();
 
-                SqlCommand cmd = new SqlCommand(query, connection);             
-                cmd.Parameters.AddWithValue("@customer_id", cust.Customer_Id);
-                cmd.Parameters.AddWithValue("@total_amount", o.Total_Amount);
-                cmd.Parameters.AddWithValue("@product_id", prd.Product_Id);
-                cmd.Parameters.AddWithValue("@quantity", od.Quantity);
-                cmd.Parameters.AddWithValue("@unit_price", od.Unit_Price);
+                try
+                {
+                    // STEP 1:
+                    string order_query = @"INSERT INTO sales.orders (customer_id, total_amount, order_date)
+                                           VALUES (@customer_id, @total_amount, GETDATE())
+                                           SELECT CAST(SCOPE_IDENTITY() AS INT)";
 
-                int rows = cmd.ExecuteNonQuery();
-                return rows;
+                    SqlCommand order_cmd = new SqlCommand(order_query, connection, transaction);
+
+                    order_cmd.Parameters.AddWithValue("@customer_id", order.Customer_Id);
+                    order_cmd.Parameters.AddWithValue("@total_amount", grand_total);
+
+
+                    int latest_order_id = (int)order_cmd.ExecuteScalar();
+
+                    // STEP 2:
+                    string details_query = @"INSERT INTO sales.order_details (order_id, product_id, quantity, unit_price)
+                                             VALUES (@order_id, @product_id, @quantity, @unit_price);";
+
+                    SqlCommand details_cmd = new SqlCommand(details_query, connection, transaction);                 
+
+                    details_cmd.Parameters.AddWithValue("@order_id", latest_order_id);
+                    details_cmd.Parameters.AddWithValue("@product_id", 0);
+                    details_cmd.Parameters.AddWithValue("@quantity", 0);
+                    details_cmd.Parameters.AddWithValue("@unit_price", 0m);
+
+                    for (int i = 0; i < order.order_details.Count(); i++)
+                    {
+                        details_cmd.Parameters["@product_id"].Value = order.order_details[i].Product_Id;
+                        details_cmd.Parameters["@quantity"].Value = order.order_details[i].Quantity;
+                        details_cmd.Parameters["@unit_price"].Value = order.order_details[i].Unit_Price;
+
+                        details_cmd.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                    return true;
+
+                }
+
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
 
             }
+
         }
 
 

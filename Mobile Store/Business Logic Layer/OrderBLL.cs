@@ -8,29 +8,21 @@ namespace Business_Logic_Layer
 {
     public class OrderBLL
     {
-        public string ValidateOrder(Product prd, Customer cust, Order o, OrderDetails od)
+       
+        public bool ValidateOrderInProcess(OrderDetails od, int available_quantity)
         {
-            if (o.Total_Amount <=0)
+            if (od.Quantity > available_quantity)
             {
-                return "Error".ToLower();
+                return false;
             }
 
-            else
-            {
-                OrderDAL dal = new OrderDAL();
-                int rows = dal.AddOrderInDatabase(prd, cust, o, od);
-                if (rows > 0)
-                {
-                    return "Added".ToLower();
-                }
+            return true;
+        }
 
-                else
-                {
-                    return "Error".ToLower();
-                }
-
-            }
-            
+        public bool AddOrderInDatabase(Order order, Decimal grand_total)
+        {
+            OrderDAL dal = new OrderDAL();
+            return dal.AddOrderInDatabase(order, grand_total);
 
         }
 

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation_Layer.Order_CRUD"
         mc:Ignorable="d"
-        Title="OrderCreate" Height="500" Width="900">
-    <Grid>
+        Title="OrderCreate" Height="700" Width="900">
+    <Grid Margin="0,0,0,-6">
         <Label x:Name="Create_Order_Label" Content="Create Order" HorizontalAlignment="Left" Margin="336,14,0,0" VerticalAlignment="Top" Width="217" Height="68" FontSize="35" Background="#FFB0E959"/>
         <ComboBox x:Name="Products_ComboBox" HorizontalAlignment="Left" Margin="34,161,0,0" VerticalAlignment="Top" Width="362" Height="42" FontSize="25" SelectionChanged="Products_ComboBox_SelectionChanged" />
         <ComboBox x:Name="Customers_ComboBox" HorizontalAlignment="Left" Margin="479,159,0,0" VerticalAlignment="Top" Width="379" Height="44" FontSize="25"/>
@@ -18,7 +18,10 @@
         <Label x:Name="Total_Amount_Label" Content="Total Amount" HorizontalAlignment="Left" Margin="527,252,0,0" VerticalAlignment="Top" Height="46" Width="197" FontSize="30"/>
         <Label x:Name="Product_Label" Content="Products" HorizontalAlignment="Left" Margin="39,104,0,0" VerticalAlignment="Top" FontSize="30"/>
         <Label x:Name="Customers_Label" Content="Customers" HorizontalAlignment="Left" Margin="483,104,0,0" VerticalAlignment="Top" FontSize="30" Width="164"/>
-        <Button x:Name="Place_Order_Button" Content="Place Order" HorizontalAlignment="Left" Margin="512,382,0,0" VerticalAlignment="Top" Height="77" Width="285" FontSize="30" Background="#FFFF5454" Click="Place_Order_Button_Click"/>
+        <Button x:Name="Place_Order_Button" Content="Place Order" HorizontalAlignment="Left" Margin="572,487,0,0" VerticalAlignment="Top" Height="77" Width="285" FontSize="30" Background="#FFFF5454" Click="Place_Order_Button_Click"/>
+        <Button x:Name="Add_Product_Button" Content="Add Product" HorizontalAlignment="Left" Margin="42,487,0,0" VerticalAlignment="Top" Height="77" Width="223" FontSize="30" Click="Add_Product_Button_Click"/>
+        <Label x:Name="Available_Quantity_Label" Content="Available Quantity" HorizontalAlignment="Left" Margin="41,383,0,0" VerticalAlignment="Top" Width="265" Height="54" FontSize="30"/>
+        <TextBox x:Name="Available_Quantity_Textbox" HorizontalAlignment="Left" Margin="328,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="54" FontSize="25"/>
 
     </Grid>
 </Window>

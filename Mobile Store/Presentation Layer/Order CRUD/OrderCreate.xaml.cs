@@ -20,15 +20,21 @@ namespace Presentation_Layer.Order_CRUD
     /// </summary>
     public partial class OrderCreate : Window
     {
+        private Order order = new Order();
+        private decimal grand_total = 0;
+        private OrderBLL bll = new OrderBLL();
+
         public OrderCreate()
         {
             InitializeComponent();
+            // Giving 'Products_ComboBox' values
             ProductBLL prd_bll = new ProductBLL();
             List<Product> products = prd_bll.GetProductsList();
             Products_ComboBox.ItemsSource = products;
             Products_ComboBox.DisplayMemberPath = "Products";
             Products_ComboBox.SelectedValuePath = "Product_Id";
 
+            // Giving 'Customers_ComboBox' values
             CustomerBLL cust_bll = new CustomerBLL();
             List<Customer> customers = cust_bll.GetCustomersList();
             Customers_ComboBox.ItemsSource = customers;
@@ -39,28 +45,13 @@ namespace Presentation_Layer.Order_CRUD
 
         private void Place_Order_Button_Click(object sender, RoutedEventArgs e)
         {
-            Product product = (Product)Products_ComboBox.SelectedItem;
-            Customer customer = (Customer)Customers_ComboBox.SelectedItem;
-            Order o = new Order();
-            OrderDetails od = new OrderDetails();
-            od.Quantity = Convert.ToInt32(Quantity_Textbox.Text);
-             od.Unit_Price = Convert.ToDecimal(Unit_Price_Textbox.Text);
-            o.Total_Amount = Convert.ToDecimal(Total_Amount_Textbox.Text);
+            bool result = bll.AddOrderInDatabase(order, grand_total);
 
-            OrderBLL bll = new OrderBLL();
-            string order = bll.ValidateOrder(product, customer, o, od);
-
-            if (order == "Error".ToLower())
+            if (result)
             {
-                MessageBox.Show("Error! can not place Order");
+                MessageBox.Show("Order Placed Successfully!");
             }
-
-            else
-            {
-                MessageBox.Show("Success! Order placed");
-                this.Close();
-            }
-
+            this.Close();
         }
 
         private void Quantity_Textbox_TextChanged(object sender, TextChangedEventArgs e)
@@ -91,8 +82,46 @@ namespace Presentation_Layer.Order_CRUD
         {
             Product prd = (Product)Products_ComboBox.SelectedItem;
             Unit_Price_Textbox.Text = prd.Current_Price.ToString();
+            Available_Quantity_Textbox.Text = prd.Stock_Quantity.ToString();
+
         }
 
 
+        private int count = 0; // This variable will check how many times the below function has run. It will be crucial in locking a customer in the ComboBox if that customer has added a product, i-e started an order.
+        private void Add_Product_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Customer c = (Customer)Customers_ComboBox.SelectedItem;
+            order.Customer_Id = c.Customer_Id;
+            OrderDetails od = new OrderDetails();
+            Product p = (Product)Products_ComboBox.SelectedItem;
+            od.Product_Id = p.Product_Id;
+            od.Quantity = Convert.ToInt32(Quantity_Textbox.Text);
+            od.Unit_Price = Convert.ToDecimal(Unit_Price_Textbox.Text);
+            grand_total += Convert.ToInt32(Total_Amount_Textbox.Text);
+
+            order.order_details.Add(od); // Here order_details of each product is getting added in the 'order_details' list of class 'Order'
+
+            // The object is created above as an attribute...
+            bool result = bll.ValidateOrderInProcess(od, Convert.ToInt32(Available_Quantity_Textbox.Text));
+
+            if (!result)
+            {
+                MessageBox.Show("Error! Selected Quantity is greater than Available Quantity");
+            }
+
+            else
+            {               
+                MessageBox.Show("Product Added Successfully in the order!");
+                Quantity_Textbox.Clear();
+                Unit_Price_Textbox.Clear();
+                Total_Amount_Textbox.Clear();
+                Available_Quantity_Textbox.Clear();
+            }
+
+            count += 1;
+            Customers_ComboBox.IsEnabled = false;
+        }
+
+        
     }
 }
