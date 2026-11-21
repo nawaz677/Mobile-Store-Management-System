@@ -11,7 +11,7 @@ namespace Business_Logic_Layer
        
         public bool ValidateOrderInProcess(OrderDetails od, int available_quantity)
         {
-            if (od.Quantity > available_quantity)
+            if (od.Quantity > available_quantity || od.Quantity <= 0)
             {
                 return false;
             }
@@ -19,10 +19,10 @@ namespace Business_Logic_Layer
             return true;
         }
 
-        public bool AddOrderInDatabase(Order order, Decimal grand_total)
-        {
+        public bool AddOrderInDatabase(Order order, List<Product> added_products, Decimal grand_total)
+        {        
             OrderDAL dal = new OrderDAL();
-            return dal.AddOrderInDatabase(order, grand_total);
+            return dal.AddOrderInDatabase(order, added_products, grand_total);
 
         }
 

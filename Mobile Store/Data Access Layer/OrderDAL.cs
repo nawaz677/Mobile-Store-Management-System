@@ -16,7 +16,7 @@ namespace Data_Access_Layer
             return conn.GetConnection();
         }
 
-        public bool AddOrderInDatabase(Order order, Decimal grand_total)
+        public bool AddOrderInDatabase(Order order, List<Product> added_products, Decimal grand_total)
         {
             using (connection)
             {
@@ -35,8 +35,8 @@ namespace Data_Access_Layer
                     order_cmd.Parameters.AddWithValue("@customer_id", order.Customer_Id);
                     order_cmd.Parameters.AddWithValue("@total_amount", grand_total);
 
-
                     int latest_order_id = (int)order_cmd.ExecuteScalar();
+
 
                     // STEP 2:
                     string details_query = @"INSERT INTO sales.order_details (order_id, product_id, quantity, unit_price)
@@ -58,6 +58,23 @@ namespace Data_Access_Layer
                         details_cmd.ExecuteNonQuery();
                     }
 
+
+                    // STEP 3:
+                    string product_query = @"UPDATE production.products SET stock_quantity = @stock_quantity WHERE product_id = @product_id";
+
+                    SqlCommand product_cmd = new SqlCommand(product_query, connection, transaction);
+
+                    product_cmd.Parameters.AddWithValue("@stock_quantity", 0);
+                    product_cmd.Parameters.AddWithValue("@product_id", 0);
+
+                    for (int i = 0; i < added_products.Count(); i++)
+                    {
+                        product_cmd.Parameters["@product_id"].Value = added_products[i].Product_Id;
+                        product_cmd.Parameters["@stock_quantity"].Value = added_products[i].Stock_Quantity;
+
+                        product_cmd.ExecuteNonQuery();
+                    }
+
                     transaction.Commit();
                     return true;
 
@@ -72,7 +89,6 @@ namespace Data_Access_Layer
             }
 
         }
-
 
         public List<Order> GetOrdersList()
         {

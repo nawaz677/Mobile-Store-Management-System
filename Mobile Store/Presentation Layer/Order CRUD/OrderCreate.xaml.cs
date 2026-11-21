@@ -23,6 +23,7 @@ namespace Presentation_Layer.Order_CRUD
         private Order order = new Order();
         private decimal grand_total = 0;
         private OrderBLL bll = new OrderBLL();
+        List<Product> added_products = new List<Product>(); // This list contains those products which are added in an order
 
         public OrderCreate()
         {
@@ -45,13 +46,22 @@ namespace Presentation_Layer.Order_CRUD
 
         private void Place_Order_Button_Click(object sender, RoutedEventArgs e)
         {
-            bool result = bll.AddOrderInDatabase(order, grand_total);
-
-            if (result)
+            if (added_products.Count() > 0)
             {
-                MessageBox.Show("Order Placed Successfully!");
+                bool result = bll.AddOrderInDatabase(order, added_products, grand_total);
+
+                if (result)
+                {
+                    MessageBox.Show("Order Placed Successfully!");
+                }
+                this.Close();
             }
-            this.Close();
+
+            else
+            {
+                MessageBox.Show("Error! No product added in the cart");
+            }
+
         }
 
         private void Quantity_Textbox_TextChanged(object sender, TextChangedEventArgs e)
@@ -90,36 +100,49 @@ namespace Presentation_Layer.Order_CRUD
         private int count = 0; // This variable will check how many times the below function has run. It will be crucial in locking a customer in the ComboBox if that customer has added a product, i-e started an order.
         private void Add_Product_Button_Click(object sender, RoutedEventArgs e)
         {
-            Customer c = (Customer)Customers_ComboBox.SelectedItem;
-            order.Customer_Id = c.Customer_Id;
-            OrderDetails od = new OrderDetails();
-            Product p = (Product)Products_ComboBox.SelectedItem;
-            od.Product_Id = p.Product_Id;
-            od.Quantity = Convert.ToInt32(Quantity_Textbox.Text);
-            od.Unit_Price = Convert.ToDecimal(Unit_Price_Textbox.Text);
-            grand_total += Convert.ToInt32(Total_Amount_Textbox.Text);
-
-            order.order_details.Add(od); // Here order_details of each product is getting added in the 'order_details' list of class 'Order'
-
-            // The object is created above as an attribute...
-            bool result = bll.ValidateOrderInProcess(od, Convert.ToInt32(Available_Quantity_Textbox.Text));
-
-            if (!result)
+            try
             {
-                MessageBox.Show("Error! Selected Quantity is greater than Available Quantity");
+                Customer c = (Customer)Customers_ComboBox.SelectedItem;
+                order.Customer_Id = c.Customer_Id;
+                OrderDetails od = new OrderDetails();
+                Product p = (Product)Products_ComboBox.SelectedItem;
+                od.Product_Id = p.Product_Id;
+                od.Quantity = Convert.ToInt32(Quantity_Textbox.Text);
+                od.Unit_Price = Convert.ToDecimal(Unit_Price_Textbox.Text);
+
+                // The object is created above as an attribute...
+                bool result = bll.ValidateOrderInProcess(od, Convert.ToInt32(Available_Quantity_Textbox.Text));
+
+                if (!result)
+                {
+                    MessageBox.Show("Error! Invalid Quantity of Product Selected");
+                }
+
+                else
+                {
+                    grand_total += Convert.ToInt32(Total_Amount_Textbox.Text);
+                    order.order_details.Add(od); // Adding 'order_details' of each product in the list
+
+                    p.Stock_Quantity -= od.Quantity;
+                    added_products.Add(p); // Adding the product in the list
+
+                    MessageBox.Show("Product Added Successfully in the order!");
+                    Quantity_Textbox.Clear();
+                    Unit_Price_Textbox.Clear();
+                    Total_Amount_Textbox.Clear();
+                    Available_Quantity_Textbox.Clear();
+
+                    count += 1;
+                    Customers_ComboBox.IsEnabled = false; // Disabling ComboBox so an order gets placed by only one customer
+                }
             }
 
-            else
-            {               
-                MessageBox.Show("Product Added Successfully in the order!");
-                Quantity_Textbox.Clear();
-                Unit_Price_Textbox.Clear();
-                Total_Amount_Textbox.Clear();
-                Available_Quantity_Textbox.Clear();
+            catch
+            {
+                MessageBox.Show("Please select customer and add a product in the cart to proceed!");
+                
             }
-
-            count += 1;
-            Customers_ComboBox.IsEnabled = false;
+            
         }
 
         
