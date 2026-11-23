@@ -1,2 +1,2 @@
 # Mobile Store Management System
-
+Creating a project in C# that can be used in real world environments, as a POS software. The project is being built using C# involving OOP concepts and Database. As the project grows, to make things efficient Data Structures and Algorithms will be incorporated. Projects like these are the ones that take your skills to the next level. Here I am implementing a lot of things I know about programming. I've tried to add comments where needed in the code. Really wanna see this project come together... 
